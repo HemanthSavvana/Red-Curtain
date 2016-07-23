@@ -1,0 +1,19 @@
+<md-content class="md-padding">
+    <md-subheader class="md-no-sticky">Popular Persons</md-subheader>
+    <div class='md-padding' layout="row" layout-wrap>
+      <md-card style="width:18%; height:50%;" ng-repeat="person in persons | orderBy:'-popularity' ">
+        <img ng-src="https://image.tmdb.org/t/p/w154{{person.profile_path}}" class="md-card-image" alt="{{mve.title}}" height="100%">
+        <md-card-title >
+          <md-card-title-text layout="row" layout-align="center center">
+            <span class="md-subhead" ng-bind="person.name"></span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end end">
+         <span class="md-subhead" ng-bind=""></span>
+          <md-button class="md-icon-button" aria-label="Settings" ng-click="showPersonDetails(person.id)">
+            <ng-md-icon icon="redo" size="24"></ng-md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+</md-content>    

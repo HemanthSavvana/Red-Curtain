@@ -1,0 +1,55 @@
+<md-sidenav flex class="md-sidenav-left md-whiteframe-z2"
+      md-component-id="left"
+      md-is-locked-open="$mdMedia('gt-md')">
+      <md-divider></md-divider>
+       <md-content layout="column" layout-align="center center">
+         <md-button href="#/">
+         <img src="../src/img/RC_LOGO_2.jpg"/>
+         <p style="font-family:acumin-proc,letter-spacing: 1.2px">red curtain</p>
+         </md-button>
+       </md-content>
+    <md-content layout-padding>
+    <md-divider></md-divider>
+    <md-sidemenu>
+    <md-subheader class="md-no-sticky">Search By</md-subheader>
+    <md-sidemenu-group>
+        <md-sidemenu-content md-icon="movie" md-heading="Movies" md-arrow="true">
+            <md-sidemenu-button href="#/movie/popular">Popular</md-sidemenu-button>
+            <md-sidemenu-button href="#/movie/top_rated">Top Rated</md-sidemenu-button>
+        </md-sidemenu-content>
+    </md-sidemenu-group>
+    <md-sidemenu-group>
+        <md-sidemenu-content md-icon="tv" md-heading="TV" md-arrow="true">
+            <md-sidemenu-button href="#/tv/popular">Popular</md-sidemenu-button>
+            <md-sidemenu-button href="#/tv/top_rated">Top Rated</md-sidemenu-button>
+        </md-sidemenu-content>
+    </md-sidemenu-group>
+    <md-sidemenu-group>
+        <md-sidemenu-content md-icon="person_outline" md-heading="Person" md-arrow="true">
+            <md-sidemenu-button href="#/person/popular">Popular</md-sidemenu-button>
+        </md-sidemenu-content>
+    </md-sidemenu-group>
+    </md-sidemenu>
+    <md-divider></md-divider>
+    <md-subheader class="md-no-sticky">About Me</md-subheader>
+     <div layout="row" layout-align="center center">
+      <md-button class="md-icon-button" aria-label="Facebook" ng-click="null">
+          <ng-md-icon icon="facebook-box" style="fill:black" size="30"></ng-md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="Linked-In" ng-click="null">
+          <ng-md-icon icon="linkedin-box" style="fill:black" size="30"></ng-md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="Github" ng-click="null">
+          <ng-md-icon icon="github-box" style="fill:black" size="30"></ng-md-icon>
+      </md-button>
+    </div>
+    <md-divider></md-divider>
+    
+    <div layout="column" layout-align="center">
+    <md-button>
+    <span>I am Thankful to</span></md-button>
+    </div>
+
+    </md-content>
+    
+</md-sidenav>

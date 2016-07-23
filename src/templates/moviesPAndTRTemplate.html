@@ -1,0 +1,19 @@
+<md-content class="md-padding">
+    <!--<md-subheader class="md-no-sticky">Upcoming Movies</md-subheader>-->
+    <div class='md-padding' layout="row" layout-wrap>
+      <md-card style="width:18%; height:50%;" ng-repeat="mve in movies | orderBy:'-vote_average' ">
+        <img ng-src="https://image.tmdb.org/t/p/w154{{mve.poster_path}}" class="md-card-image" alt="{{mve.title}}" height="100%">
+        <md-card-title >
+          <md-card-title-text layout="row" layout-align="center center">
+            <span class="md-subhead" ng-bind="mve.title"></span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="space-between end">
+         <span class="md-subhead" ng-bind="mve.vote_average"></span>
+          <md-button class="md-icon-button" aria-label="Settings" ng-click="showMovieDetails(mve.id)">
+            <ng-md-icon icon="redo" size="24"></ng-md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+</md-content>    

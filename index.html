@@ -1,0 +1,45 @@
+<html lang="en" >
+   <head>
+      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <link rel="stylesheet" type="text/css" href="src/css/main.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="src/libraries/angular-material-sidemenu.css" rel="stylesheet">
+
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+      <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />
+      <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>
+      <script type="text/javascript" src="src/module/homePageModule.js"></script>
+      <script type="text/javascript" src="src/services/HomePageSrv.js"></script>
+      <script type="text/javascript" src="src/services/MovieSoapDetailsSrv.js"></script>
+      <script type="text/javascript" src="src/controllers/homePageCtrl.js"></script>
+      <script type="text/javascript" src="src/controllers/toolBarCtrl.js"></script>
+      <script type="text/javascript" src="src/controllers/movieDetailsCtrl.js"></script>
+      <script type="text/javascript" src="src/controllers/sideNavBarCtrl.js"></script>
+      <script type="text/javascript" src="src/controllers/tvPopularCtrl.js"></script>
+      <script type="text/javascript" src="src/controllers/tvTopRatedCtrl.js"></script>
+      <script type="text/javascript" src="src/controllers/moviesTopRatedCtrl.js"></script>
+      <script type="text/javascript" src="src/controllers/moviesPopularCtrl.js"></script>
+      <script type="text/javascript" src="src/controllers/personPopularCtrl.js"></script>
+      <script type="text/javascript" src="src/routes/routes.js"></script>
+      <script type="text/javascript" src="src/module/main.js"></script>
+
+
+      <script src="src/libraries/angular-material-sidemenu.js"></script>
+   </head>
+   <body flex ng-app="main" layout="row" ng-cloak>
+   <div ng-include="'src/templates/sideNav.html'" ng-controller='sideNavBarCtrl' layout="vertical"></div>
+   <div layout="column" style="width:100%">
+      <div flex="10"  ng-include="'src/templates/toolBar.html'" ng-controller="toolBarCtrl"></div>
+      <div flex layout="column" ng-view>
+         
+      </div>
+   </div>
+   
+   </body>
+</html>
