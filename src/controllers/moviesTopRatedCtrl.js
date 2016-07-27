@@ -1,5 +1,5 @@
 angular.module('homePageModule')
-	.controller('moviesTopRatedCtrl',function(MovieSoapDetailsSrv,$scope){
+	.controller('moviesTopRatedCtrl',function(MovieSoapDetailsSrv,$scope,$location){
 		$scope.movies=[];
 		MovieSoapDetailsSrv.topRatedMovies()
 			.then(function(results){
@@ -8,6 +8,6 @@ angular.module('homePageModule')
 				alert('No movies retrieved to display');
 			});
 		$scope.showMovieDetails = function(id){
-			
-		};	
+		$location.path('/movie/'+id);
+	};	
 	});

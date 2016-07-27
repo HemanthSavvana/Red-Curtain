@@ -1,5 +1,5 @@
 	angular.module('homePageModule')
-	.controller('tvPopularCtrl',function(MovieSoapDetailsSrv,$scope){
+	.controller('tvPopularCtrl',function(MovieSoapDetailsSrv,$scope,$location){
 		$scope.tv=[];
 		MovieSoapDetailsSrv.popularTv()
 			.then(function(results){
@@ -7,7 +7,8 @@
 			},function(data){
 				alert('No TV series retrieved to display');
 			});
-		$scope.showDetails = function(id){
-			
-		};
+		$scope.showSoapDetails = function(id){
+		$location.path('/soap/'+id);
+	};
+
 	});
