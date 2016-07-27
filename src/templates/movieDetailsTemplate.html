@@ -1,3 +1,15 @@
 <md-content class="md-padding">
-You will see details here in short time
+	<span flex="10"></span>
+	<div flex="10">
+	<img src="https://image.tmdb.org/t/p/w150{{movie.poster_path}}">
+	</div>
+	<span flex="5"></span> 
+	<div flex layout="column">
+		<span>Title: {{movie.original_title}}</span>
+		<span>Overview: {{movie.overview}}</span>
+		<span>Rating: {{movie.vote_average}}</span>
+	</div>
 </md-content>
+	<!--   /5wD7Z5xqbXvWzM9odFYQsAnNTqM.jpg
+<div layout="row" layout-fill ng-style="{'background-image':'url(https://image.tmdb.org/t/p/w1280'+ movie.backdrop_path +')'}">
+</div>	>

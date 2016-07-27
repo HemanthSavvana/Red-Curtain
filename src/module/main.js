@@ -1,1 +1,1 @@
-angular.module('main',['ngMaterial','ngMaterialSidemenu','ngMdIcons','angular-loading-bar','ngAnimate','homePageModule','ngRoute']);
+angular.module('main',['ngMaterial','ngMaterialSidemenu','ngMdIcons','angular-loading-bar','ngAnimate','homePageModule','ngRoute','satellizer']);

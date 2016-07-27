@@ -34,6 +34,10 @@ angular.module('homePageModule')
 			templateUrl:'src/templates/soapDetailsTemplate.html',
 			controller: 'soapDetailsCtrl'
 		}).
+		when('/person/:id',{
+			templateUrl:'src/templates/personDetailsTemplate.html',
+			controller: 'personDetailsCtrl'
+		}).
 		otherwise({
 			redirectTo: '/'
 		})

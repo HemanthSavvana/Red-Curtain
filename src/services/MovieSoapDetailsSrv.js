@@ -12,7 +12,7 @@ angular.module('homePageModule')
 				params:{api_key:"fa72e2361da29c69da447d8e84ef8525"}
 			})
 			.then(function(data){
-				return data.data.results;
+				return data.data;
 			},function(data){
 				alert('movieDetails api failed');
 			});
@@ -22,9 +22,19 @@ angular.module('homePageModule')
 				params:{api_key:"fa72e2361da29c69da447d8e84ef8525"}
 			})
 			.then(function(data){
-				return data.data.results;
+				return data.data;
 			},function(data){
 				alert('soapDetails api failed');
+			});
+		};
+		this.personDetails = function(){
+			return $http.get('http://api.themoviedb.org/3/person/'+this.id,{
+				params:{api_key:"fa72e2361da29c69da447d8e84ef8525"}
+			})
+			.then(function(data){
+				return data.data;
+			},function(data){
+				alert('personDetails api failed');
 			});
 		};
 		this.popularMovies = function(){

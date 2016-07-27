@@ -1,5 +1,6 @@
 angular.module('homePageModule')
-.controller('toolBarCtrl',function($interval,$http,$scope){
+.controller('toolBarCtrl',function($interval,$http,$scope,$mdDialog,$auth){
+	$scope.isOpen = "false";
 	
 	$scope.message = {
 			author : "Akira Kurosawa",
@@ -27,6 +28,24 @@ angular.module('homePageModule')
 			c=1;
 		}
 	};
+	$scope.showDialog = function(ev){
+	$mdDialog.show({
+      controller: 'loginCtrl',
+      templateUrl: 'src/templates/loginPopUpTemplate.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+    })
+    .then(function(answer) {
+      $scope.status = 'You said the information was "' + answer + '".';
+    }, function() {
+      $scope.status = 'You cancelled the dialog.';
+    });
+	};
+
+	$scope.authenticate = function(provider) {
+      $auth.authenticate(provider);
+    };
 
 	
 });

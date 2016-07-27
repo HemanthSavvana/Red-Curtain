@@ -1,5 +1,5 @@
 angular.module('homePageModule')
-	.controller('tvTopRatedCtrl',function(MovieSoapDetailsSrv,$scope){
+	.controller('tvTopRatedCtrl',function(MovieSoapDetailsSrv,$scope,$location){
 		$scope.tv=[];
 		MovieSoapDetailsSrv.topRatedTv()
 			.then(function(results){
@@ -7,7 +7,8 @@ angular.module('homePageModule')
 			},function(data){
 				alert('No TV series retrieved to display');
 			});
-		$scope.showDetails = function(id){
-			
-		};
+		$scope.showSoapDetails = function(id){
+		$location.path('/soap/'+id);
+	};
+
 	});
